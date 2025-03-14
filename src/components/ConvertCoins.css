@@ -1,0 +1,17 @@
+.convert-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .convert-container button {
+    background: green;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .convert-container button:hover {
+    background: darkgreen;
+  }
+  

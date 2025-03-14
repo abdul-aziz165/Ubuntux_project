@@ -1,0 +1,71 @@
+/* Center the login container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #141E30, #243B55);
+}
+
+/* Styling for the login box */
+.login-box {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+}
+
+/* Title */
+.login-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input fields */
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Login button */
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover effect for button */
+.login-box button:hover {
+    background-color: #0056b3;
+}
+
+/* Error message */
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+/* Sign up link */
+.login-box p {
+    margin-top: 10px;
+}
+
+.login-box a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.login-box a:hover {
+    text-decoration: underline;
+}

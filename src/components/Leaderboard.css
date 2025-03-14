@@ -1,0 +1,15 @@
+.leaderboard-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .leaderboard-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .leaderboard-container li {
+    font-size: 18px;
+    padding: 5px 0;
+  }
+  

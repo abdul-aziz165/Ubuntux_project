@@ -1,0 +1,65 @@
+/* Center the signup container */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(to right, #2b5876, #4e4376);
+}
+
+/* Styling for the signup box */
+.signup-box {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+}
+
+/* Title */
+.signup-box h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Input fields */
+.signup-box input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Signup button */
+.signup-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #28a745;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Hover effect for button */
+.signup-box button:hover {
+    background-color: #218838;
+}
+
+/* Sign up link */
+.signup-box p {
+    margin-top: 10px;
+}
+
+.signup-box a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.signup-box a:hover {
+    text-decoration: underline;
+}

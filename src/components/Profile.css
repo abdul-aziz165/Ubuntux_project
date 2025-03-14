@@ -1,0 +1,17 @@
+.profile-container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .profile-container button {
+    background: blue;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .profile-container button:hover {
+    background: darkblue;
+  }
+  
