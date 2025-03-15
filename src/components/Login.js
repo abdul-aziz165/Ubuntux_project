@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import "./Login.css"; 
 
 function Login({ setAuth }) {
@@ -8,14 +9,24 @@ function Login({ setAuth }) {
     const [error, setError] = useState("");
     const navigate = useNavigate();
 
-    const handleLogin = (e) => {
+    const handleLogin = async (e) => {
         e.preventDefault();
-        if (username === "rans" && password === "1234") {
-            localStorage.setItem("isAuthenticated", "true"); // Store authentication in localStorage 
-            setAuth(true);
-            navigate("/historycontent"); 
-        } else {
-            setError("Invalid username or password");
+
+        try {
+            const response = await axios.post("http://localhost/ubuntuX_backend/login.php", {
+                username,
+                password
+            });
+
+            if (response.data.auth) {
+                localStorage.setItem("isAuthenticated", "true");
+                setAuth(true);
+                navigate("/historycontent");
+            } else {
+                setError(response.data.error);
+            }
+        } catch (err) {
+            setError("Login failed. Please try again.");
         }
     };
 
