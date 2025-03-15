@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import "./Login.css"; 
 
 function Login({ setAuth }) {
@@ -11,28 +10,32 @@ function Login({ setAuth }) {
 
     const handleLogin = async (e) => {
         e.preventDefault();
-
         try {
-            const response = await axios.post("http://localhost/ubuntuX_backend/login.php", {
-                username,
-                password
+            const response = await fetch("http://ubuntuxx.infinityfreeapp.com/login.php", { 
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ username, password })
             });
-
-            if (response.data.auth) {
-                localStorage.setItem("isAuthenticated", "true");
+    
+            const data = await response.json();
+            if (data.success) {
+                localStorage.setItem("isAuthenticated", "true"); 
                 setAuth(true);
                 navigate("/historycontent");
             } else {
-                setError(response.data.error);
+                setError(data.message);
             }
-        } catch (err) {
-            setError("Login failed. Please try again.");
+        } catch (error) {
+            setError("Server error. Please try again later.");
         }
     };
 
     return (
         <div className="login-container">
             <div className="login-box">
+                <h1>UbuntuX</h1>
                 <h2>Login</h2>
                 {error && <p className="error">{error}</p>}
                 <form onSubmit={handleLogin}>

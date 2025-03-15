@@ -12,28 +12,32 @@ function Signup() {
 
     const handleSignup = async (e) => {
         e.preventDefault();
-
         try {
-            const response = await axios.post("http://localhost/ubuntuX_backend/signup.php", {
-                username,
-                email,
-                password
+            const response = await fetch("http://ubuntuxx.infinityfreeapp.com/signup.php", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({ username, email, password })
             });
-
-            if (response.data.message) {
-                alert(response.data.message);
-                navigate("/"); 
+    
+            const data = await response.json();
+            if (data.success) {
+                alert("Account Created Successfully!"); 
+                navigate("/");
             } else {
-                setError(response.data.error);
+                alert(data.message);
             }
-        } catch (err) {
-            setError("Signup failed. Please try again.");
+        } catch (error) {
+            alert("Server error. Please try again later.");
         }
     };
+    
 
     return (
         <div className="signup-container">
             <div className="signup-box">
+                <h1>UbuntuX</h1>
                 <h2>Sign Up</h2>
                 {error && <p className="error">{error}</p>}
                 <form onSubmit={handleSignup}>

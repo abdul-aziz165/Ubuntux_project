@@ -1,14 +1,11 @@
 <?php
-$servername = "ubuntuxx.infinityfree.com"; 
-$username = "your_db_username";  
-$password = "your_db_password";  
-$database = "your_db_name";     
+$servername = "sql211.infinityfree.com";  
+$username = "if0_38523458";  
+$password = "1Lebron2021";  
+$database = "if0_38523458_ubuntux_db";     
 
 $conn = new mysqli($servername, $username, $password, $database);
 if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-else {
-    echo "Connected successfully!";
+    die(json_encode(["success" => false, "message" => "Database connection failed"]));
 }
 ?>
