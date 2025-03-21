@@ -1,17 +1,64 @@
 .convert-container {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .convert-container button {
-    background: green;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .convert-container button:hover {
-    background: darkgreen;
-  }
-  
+  text-align: center;
+  padding: 40px;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 50px auto;
+}
+
+.convert-container h2 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.convert-container p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.convert-container input {
+  width: 80%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.convert-container input:focus {
+  border-color: #007bff;
+}
+
+.convert-container button {
+  background: #007bff;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.convert-container button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+.convert-container button:active {
+  transform: scale(0.95);
+}
+
+.convert-container p:last-child {
+  font-size: 18px;
+  color: #333;
+  margin-top: 20px;
+  font-weight: bold;
+}

@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background-color: #222;
+    background-color: #0f0f0f;
     color: white;
   }
   
@@ -40,5 +40,56 @@
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid white;
+  }
+  .connect-wallet-button {
+    display: block; /* Makes the button take up the full width available */
+    color: rgb(255, 255, 255); /* White text */
+    background-color: rgb(66, 135, 119); /* Green background */
+    padding: 0px 14px; /* Padding around the text */
+    border: none; /* Removes the default border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px; /* Text size */
+    font-weight: 700; /* Bold text */
+    text-align: left; /* Text alignment */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    opacity: 1; /* Fully opaque */
+    transition: background-color 0.125s ease; /* Smooth transition for background-color changes */
+  }
+
+  /* Optional: Add hover effect */
+  .connect-wallet-button:hover {
+    background-color: rgb(10, 248, 248); /* Darker green on hover */
+  }
+  .connect-wallet-button {
+    color: white; /* White text */
+    background-color: rgb(20, 70, 177); /* Teal background */
+    padding: 10px 16px; /* More padding for a better appearance */
+    border: none; /* No border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px; /* Readable text size */
+    font-weight: bold; /* Make text bold */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease; /* Smooth transitions */
+  }
+  
+  .connect-wallet-button:hover {
+    background-color: rgb(10, 66, 248); /* Light cyan on hover */
+    transform: scale(1.05); /* Slightly increase size */
+  }
+  .logout-button {
+    color: white; /* White text */
+    background-color: rgb(200, 50, 50); /* Red background */
+    padding: 10px 16px; /* Padding for better size */
+    border: none; /* No default border */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 16px; /* Readable text */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer on hover */
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease; /* Smooth transition */
+  }
+  
+  .logout-button:hover {
+    background-color: rgb(255, 0, 0); /* Bright red on hover */
+    transform: scale(1.05); /* Slight enlargement on hover */
   }
   

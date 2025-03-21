@@ -62,8 +62,14 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.about-section h2, .about-section h3 {
+.about-section h2 {
     color: #f39c12;
+}
+
+.about-section h3 {
+    color: #f39c12;
+    text-align: center;
+
 }
 
 .about-section ul {

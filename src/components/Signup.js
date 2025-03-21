@@ -1,7 +1,8 @@
 import { useState } from "react"; 
 import { useNavigate } from "react-router-dom";
-import axios from "axios"; 
 import "./Signup.css"; 
+
+const API_URL = "http://localhost/ubuntuX_backend/"; // Change this based on your local XAMPP setup
 
 function Signup() {
     const [username, setUsername] = useState("");
@@ -13,26 +14,25 @@ function Signup() {
     const handleSignup = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("http://ubuntuxx.infinityfreeapp.com/signup.php", {
+            const response = await fetch(API_URL + "signup.php", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({ username, email, password })
             });
-    
+
             const data = await response.json();
             if (data.success) {
                 alert("Account Created Successfully!"); 
                 navigate("/");
             } else {
-                alert(data.message);
+                setError(data.error || "Signup failed. Try another username or email.");
             }
         } catch (error) {
-            alert("Server error. Please try again later.");
+            setError("Server error. Please try again later.");
         }
     };
-    
 
     return (
         <div className="signup-container">

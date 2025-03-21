@@ -1,17 +1,82 @@
 .profile-container {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .profile-container button {
-    background: blue;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .profile-container button:hover {
-    background: darkblue;
-  }
-  
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.profile-picture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #007bff;
+}
+
+.upload-btn {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.profile-details {
+  text-align: left;
+}
+
+.profile-details p {
+  font-size: 18px;
+  margin: 8px 0;
+  color: #333;
+}
+
+.profile-details strong {
+  color: #007bff;
+}
+
+.edit-mode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.edit-mode input {
+  width: 90%;
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.profile-details button {
+  padding: 10px 16px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+.profile-details button:hover {
+  background-color: #0056b3;
+}
+
+.logout-btn {
+  background-color: #ff4d4d;
+}
+
+.logout-btn:hover {
+  background-color: #cc0000;
+}

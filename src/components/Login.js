@@ -8,24 +8,27 @@ function Login({ setAuth }) {
     const [error, setError] = useState("");
     const navigate = useNavigate();
 
+    const API_URL = "http://localhost/ubuntuX_backend/";
+
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch("http://ubuntuxx.infinityfreeapp.com/login.php", { 
+            const response = await fetch(`${API_URL}login.php`, { 
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
                 },
                 body: JSON.stringify({ username, password })
             });
-    
+
             const data = await response.json();
             if (data.success) {
-                localStorage.setItem("isAuthenticated", "true"); 
+                localStorage.setItem("isAuthenticated", "true");
+                localStorage.setItem("username", username);  // Store the logged-in username
                 setAuth(true);
                 navigate("/historycontent");
             } else {
-                setError(data.message);
+                setError(data.error || "Invalid credentials");
             }
         } catch (error) {
             setError("Server error. Please try again later.");

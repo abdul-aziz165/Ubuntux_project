@@ -9,7 +9,7 @@ function Home() {
       
         <img src="/images/uxlogo.png" alt="UbuntuX Logo" className="home-image" />
         <div className="text-content">
-          <h1>Welcome to UbuntuX</h1>
+          <div className=".about-section h2"><h1>Welcome to UbuntuX</h1></div>
           <p>
             UbuntuX is a blockchain-powered educational game that merges entertainment, learning, and financial incentives.
           </p>
@@ -25,7 +25,8 @@ function Home() {
 
       <div className="about-section">
         <h2>About UbuntuX</h2>
-        <p>UbuntuX is designed to make African history engaging, rewarding, and interactive. Core features include:</p>
+        <p>UbuntuX is designed to make African history engaging, rewarding, and interactive.</p>
+        <h3><i>Core features include:</i></h3>
         <ul>
           <li><strong>Interactive Storytelling:</strong> Embark on historical adventures, engaging with key moments, figures, and civilizations.</li>
           <li><strong>Quizzes & Puzzles:</strong> Fun challenges test players' knowledge and problem-solving skills.</li>
